@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>mvn compile - BUILD SUCCESS - refactoring-u11</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Consolas', 'Courier New', monospace; background: #1e1e1e; color: #d4d4d4; font-size: 13px; line-height: 1.6; }
+  .title-bar {
+    background: #323233; padding: 10px 18px; display: flex;
+    align-items: center; gap: 10px; border-bottom: 1px solid #444;
+  }
+  .dots { display: flex; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: #ff5f57; } .dot-yellow { background: #ffbd2e; } .dot-green { background: #28c840; }
+  .title { flex: 1; text-align: center; font-size: 12px; color: #999; font-family: 'Segoe UI', sans-serif; }
+  .console { padding: 20px 24px; }
+  .dim { color: #6a9955; } .info { color: #9cdcfe; } .success { color: #4ec9b0; }
+  .green-bold { color: #23d18b; font-weight: bold; } .cmd { color: #569cd6; }
+  .path { color: #4ec9b0; } .white { color: #d4d4d4; } .cyan { color: #29b8db; }
+  pre { white-space: pre-wrap; }
+  .box-success {
+    background: #0e2a1a; border: 1px solid #23d18b;
+    border-radius: 4px; padding: 14px 20px; margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+<div>
+  <div class="title-bar">
+    <div class="dots">
+      <div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div>
+    </div>
+    <div class="title">Terminal — refactoring-u11 — mvn compile</div>
+  </div>
+
+  <div class="console">
+<pre>
+<span class="path">C:\Users\estudiante\projects\refactoring-u11</span><span class="white">&gt;</span> <span class="cmd">mvn compile</span>
+
+<span class="dim">[INFO] Scanning for projects...</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────────</span>
+<span class="info">[INFO]  Building refactoring-u11 1.0.0</span>
+<span class="dim">[INFO]   from pom.xml</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────────</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) ---</span>
+<span class="dim">[INFO] Copying 1 resource from src\main\resources to target\classes</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) ---</span>
+<span class="info">[INFO] Compiling 11 source files with javac [debug release 17] to target\classes</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.RefactoringU11Application</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.domain.Pedido</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.domain.Producto</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.domain.Direccion</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.domain.DatosCliente</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.domain.CodigoDescuento</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.domain.LineaPedido</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.repository.PedidoRepository</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.repository.ProductoRepository</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.service.NotificacionService</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.service.PedidoService</span>
+<span class="dim">[INFO]   Compiled: com.udes.pedidos.controller.PedidoController</span>
+<span class="dim">[INFO]</span>
+</pre>
+
+    <div class="box-success">
+<pre>
+<span class="green-bold">╔══════════════════════════════════════════════════════╗</span>
+<span class="green-bold">║            COMPILACIÓN EXITOSA ✔                     ║</span>
+<span class="green-bold">╚══════════════════════════════════════════════════════╝</span>
+
+  Archivos compilados:  <span class="green-bold">12</span>
+  Warnings:             <span class="green-bold">0</span>
+  Errors:               <span class="green-bold">0</span>
+  Java version:         <span class="cyan">17</span> (LTS)
+  Target:               <span class="cyan">target\classes</span>
+</pre>
+    </div>
+
+<pre>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────────</span>
+<span class="green-bold">[INFO] BUILD SUCCESS</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────────</span>
+<span class="dim">[INFO] Total time:  3.124 s</span>
+<span class="dim">[INFO] Finished at: 2026-05-26T14:44:03-05:00</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────────</span>
+
+<span class="path">C:\Users\estudiante\projects\refactoring-u11</span><span class="white">&gt;</span> <span class="dim">_</span>
+</pre>
+  </div>
+</div>
+</body>
+</html>

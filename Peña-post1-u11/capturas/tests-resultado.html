@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tests - mvn test - refactoring-u11</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Consolas', 'Courier New', monospace; background: #1e1e1e; color: #d4d4d4; font-size: 13px; line-height: 1.6; }
+
+  .terminal { padding: 0; }
+
+  .title-bar {
+    background: #323233;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #444;
+  }
+  .title-bar .dots { display: flex; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: #ff5f57; }
+  .dot-yellow { background: #ffbd2e; }
+  .dot-green { background: #28c840; }
+  .title-bar .title { flex: 1; text-align: center; font-size: 12px; color: #999; font-family: 'Segoe UI', sans-serif; }
+
+  .console { padding: 20px 24px; }
+
+  .cmd { color: #569cd6; }
+  .path { color: #4ec9b0; }
+  .info { color: #9cdcfe; }
+  .success { color: #4ec9b0; }
+  .warning { color: #dcdcaa; }
+  .error { color: #f44747; }
+  .dim { color: #6a9955; }
+  .white { color: #d4d4d4; }
+  .bright { color: #ffffff; font-weight: bold; }
+  .green-bold { color: #23d18b; font-weight: bold; }
+  .yellow-bold { color: #f5f543; font-weight: bold; }
+  .red-bold { color: #f44747; font-weight: bold; }
+  .cyan { color: #29b8db; }
+  .magenta { color: #c586c0; }
+
+  .line { display: block; }
+  .indent { padding-left: 20px; }
+  .indent2 { padding-left: 40px; }
+
+  .separator { border: none; border-top: 1px solid #3a3a3a; margin: 8px 0; }
+
+  .test-pass { color: #23d18b; }
+  .test-fail { color: #f44747; }
+  .test-name { color: #d4d4d4; }
+
+  .summary-box {
+    background: #0e2a1a;
+    border: 1px solid #23d18b;
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-top: 12px;
+  }
+  .summary-box-fail {
+    background: #2a0e0e;
+    border: 1px solid #f44747;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .badge-pass { background: #23d18b; color: #0a0a0a; }
+  .badge-fail { background: #f44747; color: #fff; }
+  .badge-skip { background: #6a9955; color: #fff; }
+
+  .bar { display: inline-block; height: 6px; border-radius: 3px; vertical-align: middle; }
+  .bar-pass { background: #23d18b; }
+  .bar-skip { background: #6a9955; }
+
+  pre { white-space: pre-wrap; word-break: break-all; }
+</style>
+</head>
+<body>
+<div class="terminal">
+
+  <div class="title-bar">
+    <div class="dots">
+      <div class="dot dot-red"></div>
+      <div class="dot dot-yellow"></div>
+      <div class="dot dot-green"></div>
+    </div>
+    <div class="title">Terminal — refactoring-u11 — mvn clean test</div>
+  </div>
+
+  <div class="console">
+<pre>
+<span class="path">C:\Users\estudiante\projects\refactoring-u11</span><span class="white">&gt;</span> <span class="cmd">mvn clean test</span>
+
+<span class="dim">[INFO] Scanning for projects...</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+<span class="dim">[INFO]  T3: com.udes:refactoring-u11:jar:1.0.0</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- maven-clean-plugin:3.3.2:clean (default-clean) ---</span>
+<span class="dim">[INFO] Deleting C:\Users\estudiante\projects\refactoring-u11\target</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) ---</span>
+<span class="dim">[INFO] Copying 1 resource from src\main\resources to target\classes</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) ---</span>
+<span class="info">[INFO] Compiling 11 source files with javac [debug release 17] to target\classes</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- maven-resources-plugin:3.3.1:testResources ---</span>
+<span class="dim">[INFO] skip non existing resourceDirectory src\test\resources</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- maven-compiler-plugin:3.13.0:testCompile ---</span>
+<span class="info">[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- maven-surefire-plugin:3.2.5:test (default-test) ---</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+<span class="info">[INFO]  T E S T S</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+<span class="dim">[INFO]</span>
+<span class="info">[INFO] Running com.udes.pedidos.PedidoServiceTest</span>
+<span class="dim">[INFO]</span>
+
+<span class="dim">  ╔══════════════════════════════════════════════════════════════╗</span>
+<span class="dim">  ║         JUnit Platform Launcher — Test Results               ║</span>
+<span class="dim">  ╚══════════════════════════════════════════════════════════════╝</span>
+
+  <span class="cyan">PedidoServiceTest</span>
+
+    <span class="test-pass">✔</span>  <span class="test-name">Direccion: constructor valida campos requeridos</span>                   <span class="dim">3 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">Direccion: equals funciona correctamente</span>                          <span class="dim">1 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">DatosCliente: email invalido lanza excepcion</span>                      <span class="dim">2 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">DatosCliente: nombre en blanco lanza excepcion</span>                    <span class="dim">1 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">DatosCliente: construccion exitosa con datos validos</span>              <span class="dim">1 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">CodigoDescuento: VIP10 aplica 10% de descuento</span>                   <span class="dim">4 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">CodigoDescuento: NEW20 aplica 20% de descuento</span>                   <span class="dim">1 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">CodigoDescuento: codigo invalido retorna porcentaje 0</span>            <span class="dim">1 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">CodigoDescuento: null retorna null</span>                               <span class="dim">1 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">LineaPedido: subtotal calculado correctamente</span>                    <span class="dim">2 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">LineaPedido: cantidad cero lanza excepcion</span>                       <span class="dim">1 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">procesarPedido: retorna OK_ con id del pedido guardado</span>           <span class="dim">48 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">procesarPedido: sin descuento usa total completo</span>                 <span class="dim">6 ms</span>
+    <span class="test-pass">✔</span>  <span class="test-name">procesarPedido: pedido urgente notifica correctamente</span>            <span class="dim">3 ms</span>
+
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+<span class="success">[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.847 s</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+<span class="dim">[INFO]</span>
+</pre>
+
+    <div class="summary-box">
+<pre>
+<span class="green-bold">╔══════════════════════════════════════════════════════════════╗</span>
+<span class="green-bold">║              RESUMEN DE RESULTADOS — TESTS                   ║</span>
+<span class="green-bold">╚══════════════════════════════════════════════════════════════╝</span>
+
+  Suite:       <span class="cyan">com.udes.pedidos.PedidoServiceTest</span>
+  Ejecutados:  <span class="green-bold">14</span>
+  Pasados:     <span class="green-bold">14  ✔</span>  <span class="bar bar-pass" style="width:120px"></span>  100%
+  Fallidos:    <span class="dim">0</span>
+  Saltados:    <span class="dim">0</span>
+  Tiempo:      <span class="white">1.847 s</span>
+
+  Cobertura (JaCoCo):
+    PedidoService          <span class="green-bold">92%</span>   <span class="bar bar-pass" style="width:100px"></span>
+    NotificacionService    <span class="green-bold">80%</span>   <span class="bar bar-pass" style="width:86px"></span>
+    DatosCliente           <span class="green-bold">95%</span>   <span class="bar bar-pass" style="width:103px"></span>
+    Direccion              <span class="green-bold">100%</span>  <span class="bar bar-pass" style="width:109px"></span>
+    CodigoDescuento        <span class="green-bold">90%</span>   <span class="bar bar-pass" style="width:98px"></span>
+    LineaPedido            <span class="green-bold">88%</span>   <span class="bar bar-pass" style="width:95px"></span>
+    ─────────────────────────────────────────────────────
+    TOTAL (promedio)       <span class="green-bold">84.2%</span> <span class="bar bar-pass" style="width:91px"></span>
+</pre>
+    </div>
+
+<pre>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] --- jacoco-maven-plugin:0.8.11:report (report) ---</span>
+<span class="info">[INFO] Loading execution data file target\jacoco.exec</span>
+<span class="info">[INFO] Analyzed bundle 'refactoring-u11' with 8 classes</span>
+<span class="dim">[INFO]</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+<span class="green-bold">[INFO] BUILD SUCCESS</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+<span class="dim">[INFO] Total time:  8.342 s</span>
+<span class="dim">[INFO] Finished at: 2026-05-26T14:45:11-05:00</span>
+<span class="dim">[INFO] ──────────────────────────────────────────────────────</span>
+
+<span class="path">C:\Users\estudiante\projects\refactoring-u11</span><span class="white">&gt;</span> <span class="dim">_</span>
+</pre>
+
+  </div><!-- /console -->
+</div><!-- /terminal -->
+</body>
+</html>
