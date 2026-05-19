@@ -219,6 +219,8 @@ public class PedidoService {
 - Docker Desktop
 
 ### 1. Levantar SonarQube en Docker
+<img width="921" height="560" alt="image" src="https://github.com/user-attachments/assets/a08b7331-d8c5-495c-9ede-5d323645fe55" />
+
 
 ```bash
 docker run -d --name sonarqube -p 9000:9000 sonarqube:community
@@ -227,12 +229,15 @@ docker run -d --name sonarqube -p 9000:9000 sonarqube:community
 Acceder a `http://localhost:9000`, iniciar sesión (`admin`/`admin`), generar token en **Account → Security**.
 
 ### 2. Compilar y ejecutar pruebas
+<img width="849" height="651" alt="image" src="https://github.com/user-attachments/assets/aa2f3869-435d-4c57-b051-8dca03aefe59" />
+
 
 ```bash
 mvn clean verify
 ```
 
 ### 3. Análisis con SonarQube
+<img width="908" height="636" alt="image" src="https://github.com/user-attachments/assets/8903f0d0-98d0-416f-bb57-d640933d979a" />
 
 ```bash
 mvn verify sonar:sonar \
@@ -242,6 +247,7 @@ mvn verify sonar:sonar \
 ```
 
 ### 4. Ejecutar la aplicación
+<img width="866" height="641" alt="image" src="https://github.com/user-attachments/assets/bce9af4a-9988-440c-abab-e2e99f88672f" />
 
 ```bash
 mvn spring-boot:run
